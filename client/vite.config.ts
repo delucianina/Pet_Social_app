@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   // Send all requests through /graphql to the Express 3333 port 
   server: {
-    procy: {
+    proxy: {
       '/graphql': {
         target: 'http://localhost:3333'
       }

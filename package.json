@@ -1,8 +1,8 @@
 {
-  "name": "mongodb_overview",
+  "name": "fullstack_mern_graphql",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "client:install": "cd ./client && npm i",
     "client:dev": "cd ./client && npm run dev",
@@ -16,17 +16,8 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "@apollo/server": "^4.11.2",
-    "bcrypt": "^5.1.1",
-    "concurrently": "^9.1.0",
-    "express": "^4.21.1",
-    "mongoose": "^8.8.0"
-  },
   "devDependencies": {
-    "@types/bcrypt": "^5.0.2",
-    "@types/express": "^5.0.0",
-    "nodemon": "^3.1.7"
-  },
-  "description": ""
+    "concurrently": "^9.1.0",
+    "wait-on": "^8.0.1"
+  }
 }
