@@ -1,13 +1,22 @@
-import dotenv from 'dotenv';
 import jwt from 'jsonwebtoken';
 import { Types } from 'mongoose';
 import { GraphQLError } from 'graphql';
-dotenv.config();
+
+
 import UserInterface  from '../../interfaces/User';
 import Context from '../../interfaces/Context';
 import User from '../../models/User.js';
+
+
 import { errorHandler } from '../helpers/index.js';
+
+
+
+
 const { sign } = jwt;
+
+
+
 function createToken(user_id: Types.ObjectId) {
   if (!process.env.JWT_SECRET) {
     throw new Error('JWT_SECRET is not defined');
