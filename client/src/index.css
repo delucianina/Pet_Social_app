@@ -6,7 +6,7 @@ html, body, #root {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vh;
+  width: 100vw;
   height: 100vh;
   z-index: 100;
   background: #eee;
@@ -15,6 +15,14 @@ html, body, #root {
 nav a.active:not(.navbar-brand), 
 nav a:hover:not(.navbar-brand) {
   text-decoration: underline;
+}
+
+.dropdown-menu.show {
+  max-width: 70px !important;
+}
+
+.dropdown-menu[data-bs-popper] .dropdown-item-text {
+  word-wrap: break-word !important;
 }
 
 .landing-hero-image {
@@ -37,19 +45,48 @@ nav a:hover:not(.navbar-brand) {
   height: 100%;
 }
 
-
-/* standard container  */
-.dropdown-menu[data-bs-popper] {
-  max-width: 190px;
-}
-
-.dropdown-menu[data-bs-popper] .dropdown-item-text {
-  word-wrap: break-word !important;
-}
-
 .pet-output {
   grid-template-columns: repeat(3, 1fr);
 }
+
+@media (max-width: 980px) {
+  .pet-output {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pet-output .button-wrap {
+    flex-direction: column;
+    row-gap: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-text {
+    margin-top: 25px !important;
+  }
+}
+
+@media (max-width: 490px) {
+  .nav-wrap {
+    flex-direction: column !important;
+  }
+
+  .navbar-nav.ms-auto {
+    margin-left: 0 !important;
+  }
+
+  main form {
+    width: 450px !important;
+  }
+
+  .pet-output {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
 
 /* footer {
 
