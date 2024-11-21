@@ -12,12 +12,12 @@ import PetForm from './pages/PetForm';
 import Dashboard from './pages/Dashboard/index';
 
 function App() {
-  const {state} = useStore();
+  const { state } = useStore()!;
 
   return (
     <>
     {state.loading && (
-      <div className="loading-overlay d-flex justify-content-center aliogn-items-center"></div>
+      <div className="loading-overlay d-flex justify-content-center align-items-center"></div>
     )}
     <Header />
     
